@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SóCreator | Viralize sem tráfego pago</title>
+<meta name="description" content="30 creators, 30 vídeos, 1 marca. Desafios de vídeo criativos: marcas recebem volume por R$ 2.000, creators ganham portfólio e prêmio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/webp" href="CARA-CAMALEAO.webp">
+<meta property="og:title" content="SóCreator | Viralize sem tráfego pago">
+<meta property="og:image" content="CARA-CAMALEAO.webp">
+<style>
+@font-face{font-family:Champ;src:url(Champ-Black.ttf) format("truetype");font-weight:900;font-style:normal;font-display:swap}
+:root{--bk:#000;--ink:#0d0d0d;--lime:#ccff00;--olive:#9ab800;--dk:#4d5c00;--wh:#fff;--gr:#1a1a1a;--mut:#b8b8b8}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bk);color:var(--wh);font:400 18px/1.55 Inter,system-ui,sans-serif}
+h1,h2,h3,.big{font-family:Champ,Impact,sans-serif;font-weight:900;font-synthesis:none;line-height:1.02;letter-spacing:-.01em}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+/* nav */
+nav{position:sticky;top:0;z-index:9;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--lime)}
+nav .w{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
+nav img{height:38px;width:auto;display:block}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:#000;font:800 16px Inter,sans-serif;padding:13px 22px;border-radius:999px;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{background:#fff}
+.btn:focus-visible,.tab:focus-visible{outline:3px solid #fff;outline-offset:3px}
+nav .btn{padding:9px 16px;font-size:14px}
+/* hero */
+.hero{text-align:center;padding:48px 0 40px;background:#000}
+.hero img{width:min(300px,70vw);height:auto}
+.hero .mascot{width:min(190px,48vw);height:auto;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff)}.hero h1{font-size:clamp(46px,11vw,120px);margin:20px auto 10px;max-width:1000px;text-transform:uppercase}.hero h1 em{font-style:normal;display:inline-block;background:var(--lime);color:#000;padding:.02em .18em;border-radius:.12em;transform:rotate(-1.5deg)}.hero .sub{font-size:clamp(22px,4vw,40px);margin:18px 0 14px}
+.hero p{max-width:640px;margin:0 auto 28px;color:var(--mut);font-size:20px}
+.tabs{display:inline-grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--gr);padding:6px;border-radius:999px;width:min(520px,100%)}
+.tab{font:900 17px Champ,sans-serif;color:#fff;background:none;border:0;border-radius:999px;padding:16px 10px;cursor:pointer}
+.tab[aria-selected=true]{background:var(--lime);color:#000}
+/* numbers */
+.nums{background:var(--lime);color:#000;padding:44px 0}
+.nums h2{text-align:center;font-size:clamp(26px,4.5vw,44px);margin-bottom:28px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.n{background:#000;color:#fff;border-radius:22px;padding:22px 14px;text-align:center}
+.n .i{font-size:40px;color:var(--lime)}
+.n b{display:block;font:900 clamp(36px,5vw,52px)/1 Champ,sans-serif;color:var(--lime);margin:8px 0 4px}
+.n span{font-size:15px;color:var(--mut)}
+/* panels */
+.panel{padding:64px 0 24px}
+.panel[hidden]{display:none}
+.panel>.w>h2{font-size:clamp(32px,6vw,64px);margin-bottom:10px}
+.panel>.w>h2 em{font-style:normal;color:var(--lime)}
+.lead{color:var(--mut);font-size:20px;max-width:700px;margin-bottom:34px}
+.adv{display:grid;gap:16px}
+.a{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;background:var(--gr);border-left:8px solid var(--lime);border-radius:20px;padding:24px}
+.a .i{font-size:56px;color:var(--lime)}
+.a h3{font-size:clamp(24px,4.2vw,42px);margin-bottom:6px}
+.a p{color:var(--mut);max-width:60ch}
+.price{margin:40px 0 0;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.p{border-radius:26px;padding:30px;background:var(--lime);color:#000}
+.p.d{background:var(--gr);color:#fff;border:2px solid var(--lime)}
+.p small{display:block;font-weight:800;font-size:15px}
+.p b{display:block;font:900 clamp(44px,8vw,76px)/1 Champ,sans-serif;margin:8px 0}
+.p b s{font-size:.4em;opacity:.55;margin-right:8px}
+.p p{font-size:16px}
+.p.d b{color:var(--lime)}
+.steps{margin-top:40px;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));counter-reset:s}
+.s{background:var(--ink);border:2px solid #2a2a2a;border-radius:20px;padding:22px;position:relative}
+.s::before{counter-increment:s;content:counter(s);font:900 44px Champ,sans-serif;color:var(--olive)}
+.s h3{font-size:22px;margin:4px 0 6px}
+.s p{font-size:15px;color:var(--mut)}
+.note{margin-top:22px;font-size:14px;color:#8a8a8a}
+/* cta */
+.cta{margin-top:56px;background:var(--olive);color:#000;text-align:center;padding:72px 0}
+.cta h2{font-size:clamp(32px,6vw,68px);margin-bottom:14px}
+.cta p{font-size:20px;margin-bottom:28px;font-weight:600}
+.cta .btn{background:#000;color:var(--lime);font-size:20px;padding:20px 34px}
+.cta .btn:hover{background:#fff;color:#000}
+footer{padding:26px 0;text-align:center;color:#888;font-size:14px}
+@media(max-width:560px){.a{grid-template-columns:1fr}.a .i{font-size:44px}nav .btn span{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="video" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8l-6 4 6 4z"/></symbol>
+<symbol id="users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6"/><path d="M16 4.5a3.5 3.5 0 010 7M22 20c0-3-1.5-5-4-5.8"/></symbol>
+<symbol id="coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M15 8.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.300-1.300 2.200-3 2.200-1.400 0-2.600-.6-3-1.600M12 5v2M12 17v2"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="trophy" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v6a5 5 0 01-10 0zM7 6H3v2a4 4 0 004 4M17 6h4v2a4 4 0 01-4 4"/></symbol>
+<symbol id="lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></symbol>
+<symbol id="spark" viewBox="0 0 24 24"><path d="M12 2l2.500 7.500L22 12l-7.500 2.500L12 22l-2.500-7.500L2 12l7.500-2.500z"/></symbol>
+<symbol id="target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+<symbol id="book" viewBox="0 0 24 24"><path d="M4 4h7a3 3 0 013 3v14a2 2 0 00-2-2H4zM20 4h-6M20 4v15h-6"/></symbol>
+<symbol id="tag" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.500" cy="7.500" r="1.500"/></symbol>
+<symbol id="file" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h8"/></symbol>
+<symbol id="wa" viewBox="0 0 24 24"><path d="M3 21l1.700-5A9 9 0 1112 21a9 9 0 01-4.300-1.100z"/><path d="M9 8c0 4 3 7 7 7l1-2-2.500-1-1 1c-1-.5-2-1.500-2.500-2.500l1-1L11 8z"/></symbol>
+</defs></svg>
+
+<nav><div class="w">
+<a href="#topo" aria-label="SóCreator"><img src="SOCREATOR-COM-CAMAEAO-LETRA-O.webp" alt="SóCreator"></a>
+<a class="btn" href="https://api.whatsapp.com/send/?phone=5586988836487&amp;text=Oi%20quero%20saber%20mais%20sobre%20a%20S%C3%B3Creator&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener"><svg class="i" style="font-size:20px"><use href="#wa"/></svg><span>Falar com o time</span></a>
+</div></nav>
+
+<header class="hero" id="topo"><div class="w">
+<img class="mascot" src="CARA-CAMALEAO.webp" alt="SóCreator, camaleão de óculos">
+<h1 class="vir">Viralize sem <em>tráfego pago</em></h1>
+<h2 class="sub">30 creators. 30 vídeos. 1 desafio.</h2>
+<p>A SóCreator transforma cada marca em um desafio de vídeo criativo. Marcas recebem volume e variedade. Creators ganham portfólio, marcas e prêmio.</p>
+<div class="tabs" role="tablist" aria-label="Escolha seu perfil">
+<button class="tab" role="tab" id="t-m" aria-selected="true" aria-controls="marcas">Sou marca</button>
+<button class="tab" role="tab" id="t-c" aria-selected="false" aria-controls="creators">Sou creator</button>
+</div>
+</div></header>
+
+<section class="nums" aria-label="A SóCreator em números"><div class="w">
+<h2>A SóCreator em números</h2>
+<div class="grid">
+<div class="n"><svg class="i"><use href="#users"/></svg><b data-to="30" data-pre="">30</b><span>creators por desafio</span></div>
+<div class="n"><svg class="i"><use href="#video"/></svg><b data-to="30" data-pre="">30</b><span>vídeos para a marca</span></div>
+<div class="n"><svg class="i"><use href="#coin"/></svg><b data-to="66" data-pre="R$ ">R$ 66</b><span>por vídeo, em média</span></div>
+<div class="n"><svg class="i"><use href="#clock"/></svg><b data-to="7" data-pre="">7</b><span>dias de gravação</span></div>
+<div class="n"><svg class="i"><use href="#lock"/></svg><b data-to="6" data-pre="">6</b><span>vagas de marca por mês</span></div>
+<div class="n"><svg class="i"><use href="#trophy"/></svg><b data-to="1000" data-pre="R$ ">R$ 1.000</b><span>de prêmio por desafio</span></div>
+</div>
+</div></section>
+
+<main>
+<!-- MARCAS -->
+<section class="panel" id="marcas" role="tabpanel" aria-labelledby="t-m"><div class="w">
+<h2>Para <em>marcas</em>: muito vídeo por pouco</h2>
+<p class="lead">Em vez de contratar creator um por um, sua marca abre um desafio e recebe 30 abordagens diferentes do seu produto em uma semana.</p>
+<div class="adv">
+<div class="a"><svg class="i"><use href="#video"/></svg><div><h3>30 vídeos por R$ 2.000</h3><p>Cerca de R$ 66 por vídeo. Volume que uma produção tradicional dificilmente entrega por esse valor.</p></div></div>
+<div class="a"><svg class="i"><use href="#spark"/></svg><div><h3>30 ideias, 30 olhares</h3><p>Cada creator conta o seu produto do seu jeito. Você ganha variedade de ângulos, formatos e públicos.</p></div></div>
+<div class="a"><svg class="i"><use href="#target"/></svg><div><h3>Descubra o que funciona</h3><p>Teste ângulos e creators antes de investir em anúncio, e reaproveite os vídeos no orgânico e no pago.</p></div></div>
+<div class="a"><svg class="i"><use href="#clock"/></svg><div><h3>Tudo em até 7 dias</h3><p>Você envia o briefing, a gente cuida da comunidade, da curadoria e da entrega.</p></div></div>
+<div class="a"><svg class="i"><use href="#lock"/></svg><div><h3>Só 6 marcas por mês</h3><p>Contrato de 3 meses com valor travado: 1 desafio por mês e 30 vídeos novos a cada rodada.</p></div></div>
+<div class="a"><svg class="i"><use href="#file"/></svg><div><h3>Relatório e direitos de uso</h3><p>Você recebe os vídeos aprovados, o relatório do desafio e a cessão de uso para a marca.</p></div></div>
+</div>
+<div class="price">
+<div class="p"><small>Investimento da marca</small><b>R$ 2.000</b><p>por mês, por desafio. 30 vídeos e relatório. Contrato de 3 meses (R$ 6.000 no total).</p></div>
+<div class="p d"><small>Quanto custa cada vídeo</small><b>~R$ 66</b><p>R$ 2.000 dividido por 30 creators. Sem contratar um por um.</p></div>
+</div>
+<div class="steps">
+<div class="s"><h3>Briefing</h3><p>Você conta o produto e o que quer mostrar.</p></div>
+<div class="s"><h3>Desafio aberto</h3><p>30 creators entram e gravam em 7 dias.</p></div>
+<div class="s"><h3>Curadoria</h3><p>Aprovamos, pedimos ajustes e escolhemos finalistas.</p></div>
+<div class="s"><h3>Entrega</h3><p>Você recebe 30 vídeos e o relatório.</p></div>
+</div>
+<p class="note">A SóCreator promete volume, variedade e rapidez. Resultados de venda dependem do seu produto e da sua operação.</p>
+</div></section>
+
+<!-- CREATORS -->
+<section class="panel" id="creators" role="tabpanel" aria-labelledby="t-c" hidden><div class="w">
+<h2>Para <em>creators</em>: grave, concorra, apareça</h2>
+<p class="lead">Escolha um desafio, grave seu vídeo para uma marca de verdade e concorra a R$ 1.000. Seu trabalho vai direto para o portfólio.</p>
+<div class="adv">
+<div class="a"><svg class="i"><use href="#trophy"/></svg><div><h3>R$ 1.000 para o melhor vídeo</h3><p>Cada desafio premia um vencedor ao fim da votação. Cada desafio é uma chance nova.</p></div></div>
+<div class="a"><svg class="i"><use href="#tag"/></svg><div><h3>Marcas reais no seu portfólio</h3><p>Briefing de verdade, prazo de verdade e um vídeo para mostrar na próxima proposta.</p></div></div>
+<div class="a"><svg class="i"><use href="#users"/></svg><div><h3>Comunidade de creators</h3><p>Compare ideias, aprenda com os outros 29 participantes e conheça quem está crescendo junto.</p></div></div>
+<div class="a"><svg class="i"><use href="#book"/></svg><div><h3>Feedback e aula curta</h3><p>Roteiro, gancho e edição: você recebe orientação para gravar melhor a cada desafio.</p></div></div>
+<div class="a"><svg class="i"><use href="#spark"/></svg><div><h3>Visibilidade na vitrine</h3><p>Os melhores vídeos e as vencedoras ganham destaque no Instagram @socreatorbr.</p></div></div>
+<div class="a"><svg class="i"><use href="#coin"/></svg><div><h3>Mais desafios, preço menor</h3><p>Escolheu mais de um desafio? Cada inscrição sai por R$ 49,90.</p></div></div>
+</div>
+<div class="price">
+<div class="p"><small>Inscrição em 1 desafio</small><b>R$ 79,90</b><p>Cobrança única por Pix ou cartão, no ato da inscrição. 30 vagas por desafio.</p></div>
+<div class="p d"><small>Mais de 1 desafio</small><b><s>R$ 79,90</s>R$ 49,90</b><p>Cada inscrição sai por R$ 49,90 quando você escolhe mais de um desafio.</p></div>
+</div>
+<div class="steps">
+<div class="s"><h3>Escolha</h3><p>Veja os 6 desafios do mês e escolha o seu.</p></div>
+<div class="s"><h3>Inscreva-se</h3><p>Pague a inscrição e entre no grupo do desafio.</p></div>
+<div class="s"><h3>Grave</h3><p>Receba o briefing e grave em 7 dias, do seu jeito.</p></div>
+<div class="s"><h3>Concorra</h3><p>Votação, feedback e R$ 1.000 para o melhor vídeo.</p></div>
+</div>
+<p class="note">Quem se inscreve não recebe cachê: o valor da inscrição dá acesso ao desafio, ao feedback, à comunidade e à chance do prêmio.</p>
+</div></section>
+</main>
+
+<section class="cta"><div class="w">
+<h2>Pronto para entrar no próximo desafio?</h2>
+<p>Marca ou creator, fale com o nosso time comercial agora.</p>
+<a class="btn" href="https://api.whatsapp.com/send/?phone=5586988836487&amp;text=Oi%20quero%20saber%20mais%20sobre%20a%20S%C3%B3Creator&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener"><svg class="i" style="font-size:26px"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+</div></section>
+<footer>SóCreator | Instagram @socreatorbr</footer>
+
+<script>
+const fmt=n=>n.toLocaleString('pt-BR');
+const cs=document.querySelectorAll('[data-to]'),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function run(el){const to=+el.dataset.to,pre=el.dataset.pre||'';if(rm){el.textContent=pre+fmt(to);return}
+const t0=performance.now(),d=1800;(function f(t){const p=Math.min((t-t0)/d,1),e=1-Math.pow(1-p,3);el.textContent=pre+fmt(Math.round(to*e));if(p<1)requestAnimationFrame(f)})(t0)}
+cs.forEach(e=>e.textContent=(e.dataset.pre||'')+'0');
+const io=new IntersectionObserver((es)=>es.forEach(x=>{if(x.isIntersecting){run(x.target);io.unobserve(x.target)}}),{threshold:.6});
+cs.forEach(e=>io.observe(e));
+const T=[['t-m','marcas'],['t-c','creators']];
+function show(id){T.forEach(([t,p])=>{const on=p===id;document.getElementById(t).setAttribute('aria-selected',on);document.getElementById(p).hidden=!on})}
+T.forEach(([t,p])=>document.getElementById(t).addEventListener('click',()=>{show(p);history.replaceState(null,'','#'+p);document.getElementById(p).scrollIntoView({behavior:'smooth'})}));
+if(location.hash==='#creators')show('creators');
+</script>
+</body>
+</html>
